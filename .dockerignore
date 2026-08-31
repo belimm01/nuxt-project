@@ -1,0 +1,16 @@
+.git
+.github
+node_modules
+.nuxt
+.output
+.nitro
+.cache
+dist
+coverage
+*.log
+.env
+.env.*
+!.env.example
+Dockerfile
+.dockerignore
+README.md
