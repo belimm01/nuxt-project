@@ -1,6 +1,5 @@
 # syntax=docker/dockerfile:1
 
-# --- Build stage -------------------------------------------------------------
 FROM node:22-alpine AS build
 WORKDIR /app
 
@@ -8,11 +7,10 @@ WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci
 
-# Build the Nuxt application (produces .output/ via the node-server preset).
+# Produces .output/ via the node-server preset, copied into the runtime stage.
 COPY . .
 RUN npm run build
 
-# --- Runtime stage -----------------------------------------------------------
 FROM node:22-alpine AS runtime
 WORKDIR /app
 
