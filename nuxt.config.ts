@@ -1,6 +1,4 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  // Ship as a client-rendered SPA, preserving the original project's behaviour.
   ssr: false,
 
   compatibilityDate: '2025-01-01',
